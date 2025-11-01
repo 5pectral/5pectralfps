@@ -179,3 +179,11 @@ body {
 .socials img:hover {
   filter: brightness(0) invert(1);
 }
+
+.kovaaks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-items: stretch;
+}
