@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "kovaaks-api-client": "^0.2.3"
+  }
+}

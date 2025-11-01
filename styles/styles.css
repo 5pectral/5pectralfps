@@ -1,0 +1,189 @@
+:root {
+  --bg-color: #1a1a1a;
+  --sidebar-color: #222;
+  --card-color: #2a2a2a;
+  --text-color: #e0e0e0;
+  --subtext-color: #a0a0a0;
+  --border: #333;
+  --radius: 10px;
+  --hover-glow: rgba(255, 255, 255, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* ==== PARTICLES BACKGROUND ==== */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Behind everything */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--sidebar-color);
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.profile h2 {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.nav a {
+  display: block;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: var(--radius);
+  transition: background 0.2s;
+  font-size: 0.9rem;
+}
+
+.nav a:hover,
+.nav a.active {
+  background-color: var(--card-color);
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials img {
+  width: 20px;
+  opacity: 0.7;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.socials img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Main Content */
+.content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.setup-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.gear-card {
+  display: flex;
+  align-items: center;
+  background-color: var(--card-color);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  transition: all 0.25s ease;
+}
+
+.gear-card:hover {
+  transform: scale(1.02);
+  background-color: #2e2e2e;
+  box-shadow: 0 0 10px var(--hover-glow);
+  border-color: #3a3a3a;
+}
+
+.gear-icon {
+  width: 26px;
+  height: 26px;
+  margin-right: 16px;
+  opacity: 0.85;
+}
+
+.gear-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.gear-type {
+  color: var(--subtext-color);
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+}
+
+.gear-name {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.featured {
+  width: 100%;
+  max-width: 800px;
+}
+
+.twitter-placeholder {
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 30px;
+  text-align: center;
+  opacity: 0.7;
+  font-size: 0.85rem;
+}
+
+/* --- Icon Styling: Uniform Grayscale --- */
+.gear-icon,
+.socials img {
+  filter: brightness(0) invert(0.8); /* make them a consistent light gray */
+}
+
+/* Optional: slightly brighter on hover */
+.gear-card:hover .gear-icon,
+.socials img:hover {
+  filter: brightness(0) invert(1);
+}
+
+.kovaaks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-items: stretch;
+}
